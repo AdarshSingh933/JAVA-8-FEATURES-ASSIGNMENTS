@@ -1,0 +1,25 @@
+3. Java Stream APIs
+Definition:
+Java Streams provide a high-level abstraction for processing sequences of elements (such as collections) in a functional style. They support operations like filtering, mapping, and reducing.
+
+Key Operations:
+
+Intermediate Operations (e.g., filter(), map(), distinct(), sorted()): Produce a new stream.
+Terminal Operations (e.g., collect(), forEach(), reduce()): Produce a result or a side-effect.
+Example:
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+        // Stream pipeline to filter, map, and print the result
+        numbers.stream()
+               .filter(n -> n % 2 == 0) // Filter even numbers
+               .map(n -> n * 2)          // Double the value
+               .forEach(System.out::println); // Print each element
+    }
+}
+Usage:
+Streams are used to simplify operations on collections and arrays, providing a fluent and readable way to process data.

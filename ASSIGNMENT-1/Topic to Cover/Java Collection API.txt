@@ -1,0 +1,29 @@
+5. Java Collection APIs
+Definition:
+Java Collections Framework provides a set of interfaces and classes for storing and manipulating groups of objects. The core interfaces include Collection, List, Set, and Map.
+
+Common Interfaces and Classes:
+
+List: Ordered collection, e.g., ArrayList, LinkedList.
+Set: Unordered collection of unique elements, e.g., HashSet, TreeSet.
+Map: Key-value pairs, e.g., HashMap, LinkedHashMap.
+Example:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>(Arrays.asList("a", "b", "c"));
+        Set<String> set = new HashSet<>(Arrays.asList("x", "y", "z"));
+        Map<String, Integer> map = new HashMap<>();
+        map.put("apple", 1);
+        map.put("banana", 2);
+
+        System.out.println(list); // Outputs: [a, b, c]
+        System.out.println(set);  // Outputs: [x, y, z]
+        System.out.println(map);  // Outputs: {apple=1, banana=2}
+    }
+}
+Usage:
+Java Collections APIs are used to handle data storage, retrieval, and manipulation effectively.
+

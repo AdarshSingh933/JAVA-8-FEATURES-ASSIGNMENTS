@@ -1,0 +1,26 @@
+7. Multithreading
+Definition:
+Multithreading is a programming technique where multiple threads execute concurrently to perform multiple tasks simultaneously. Threads are lightweight processes that share the same memory space.
+
+Key Concepts:
+
+Thread: The smallest unit of execution.
+Synchronization: Mechanism to control access to shared resources.
+Thread Lifecycle: States include New, Runnable, Blocked, Waiting, Timed Waiting, and Terminated.
+Example:
+
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start(); // Starts the thread
+    }
+}
+Usage:
+Multithreading improves the performance and responsiveness of applications, especially for I/O-bound and CPU-bound tasks.
+

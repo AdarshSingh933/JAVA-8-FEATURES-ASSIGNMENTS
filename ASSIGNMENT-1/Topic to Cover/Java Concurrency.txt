@@ -1,0 +1,26 @@
+8. Java Concurrency
+Definition:
+Java Concurrency is a broader concept that encompasses multithreading and deals with managing multiple threads and processes. It involves thread safety, concurrent data structures, and executor frameworks.
+
+Key Concepts:
+
+Executor Service: Manages and controls thread execution.
+Concurrent Collections: Thread-safe collections like ConcurrentHashMap.
+Synchronization Primitives: Lock, Semaphore, CountDownLatch.
+Example:
+
+import java.util.concurrent.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        
+        executor.submit(() -> System.out.println("Task 1"));
+        executor.submit(() -> System.out.println("Task 2"));
+
+        executor.shutdown(); // Shut down the executor service
+    }
+}
+Usage:
+Java Concurrency utilities are used to simplify complex thread management, enhance performance, and ensure thread safety in concurrent applications.
+

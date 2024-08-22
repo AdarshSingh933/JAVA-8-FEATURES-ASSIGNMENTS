@@ -1,0 +1,30 @@
+4. Filter, Map, Reduce
+Definition:
+
+Filter: Used to select elements based on a condition.
+Map: Transforms each element into another form.
+Reduce: Combines elements into a single result.
+Examples:
+
+Filter:
+
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+List<Integer> evenNumbers = numbers.stream()
+                                    .filter(n -> n % 2 == 0)
+                                    .collect(Collectors.toList());
+System.out.println(evenNumbers); // Outputs: [2, 4]
+Map:
+
+List<String> words = Arrays.asList("hello", "world");
+List<Integer> lengths = words.stream()
+                             .map(String::length)
+                             .collect(Collectors.toList());
+System.out.println(lengths); // Outputs: [5, 5]
+Reduce:
+
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+int sum = numbers.stream()
+                 .reduce(0, Integer::sum);
+System.out.println(sum); // Outputs: 15
+Usage:
+These operations are commonly used in conjunction to perform complex data transformations and aggregations.

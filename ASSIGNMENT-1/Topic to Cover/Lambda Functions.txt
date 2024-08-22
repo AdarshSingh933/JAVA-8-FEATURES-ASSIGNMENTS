@@ -1,0 +1,24 @@
+1. Lambda Functions
+Definition:
+Lambda functions (or lambda expressions) are a way to provide a clear and concise syntax for writing anonymous methods in Java. They are used primarily to implement functional interfaces.
+
+Syntax:
+
+(parameters) -> expression
+or
+
+(parameters) -> { statements }
+
+Example:
+To create a lambda function that adds two numbers:
+// Functional Interface
+interface Add {
+    int add(int a, int b);
+}
+
+// Lambda Expression
+Add addition = (a, b) -> a + b;
+
+System.out.println(addition.add(5, 3)); // Outputs: 8
+Usage:
+Lambda functions are used in functional programming to make code more readable and concise, especially when working with collections and streams.

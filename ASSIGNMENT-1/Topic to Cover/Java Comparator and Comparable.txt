@@ -1,0 +1,38 @@
+6. Java Comparator and Comparable
+Definition:
+
+Comparable: An interface that allows a class to define its natural ordering using the compareTo() method.
+Comparator: An interface used to define a custom ordering using the compare() method.
+Examples:
+
+Comparable:
+
+class Person implements Comparable<Person> {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return Integer.compare(this.age, other.age);
+    }
+}
+Comparator:
+
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Comparator<Person> byName = (p1, p2) -> p1.name.compareTo(p2.name);
+Usage:
+Use Comparable for natural ordering and Comparator for custom sorting criteria.

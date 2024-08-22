@@ -1,0 +1,27 @@
+2. Functional Interfaces
+Definition:
+A functional interface is an interface with just one abstract method. They are used as the target types for lambda expressions and method references.
+
+Common Functional Interfaces:
+
+Runnable (no arguments, no return value)
+Callable (no arguments, returns a value)
+Consumer (one argument, no return value)
+Function (one argument, returns a value)
+Predicate (one argument, returns a boolean)
+Supplier (no arguments, returns a value)
+Example:
+
+@FunctionalInterface
+interface MyFunctionalInterface {
+    void myMethod(); // Single abstract method
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyFunctionalInterface instance = () -> System.out.println("Lambda function");
+        instance.myMethod(); // Outputs: Lambda function
+    }
+}
+Usage:
+Functional interfaces are essential for using lambda expressions and method references, promoting functional programming styles in Java.
